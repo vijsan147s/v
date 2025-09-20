@@ -38,8 +38,8 @@ GEMINI_API_KEY = os.getenv("GEMINI_API_KEY")
 genai.configure(api_key=GEMINI_API_KEY)
 
 # Initialize Gemini models
-text_model = genai.GenerativeModel('gemini-pro')
-vision_model = genai.GenerativeModel('gemini-pro-vision')
+text_model = genai.GenerativeModel('gemini-1.5-flash')
+vision_model = genai.GenerativeModel('gemini-1.5-flash')
 
 # Health knowledge base for better responses
 HEALTH_CONTEXT = """
