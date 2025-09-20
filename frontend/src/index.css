@@ -1,0 +1,43 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    font-family: 'Inter', sans-serif;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-health-primary hover:bg-health-accent text-white font-medium py-3 px-6 rounded-lg transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-health-primary focus:ring-opacity-50;
+  }
+  
+  .btn-secondary {
+    @apply bg-health-secondary hover:bg-blue-600 text-white font-medium py-3 px-6 rounded-lg transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-health-secondary focus:ring-opacity-50;
+  }
+  
+  .chat-message {
+    @apply max-w-xs lg:max-w-md px-4 py-2 rounded-2xl text-sm;
+  }
+  
+  .chat-message-user {
+    @apply bg-health-primary text-white ml-auto rounded-br-md;
+  }
+  
+  .chat-message-ai {
+    @apply bg-gray-100 text-gray-800 mr-auto rounded-bl-md;
+  }
+  
+  .health-card {
+    @apply bg-white rounded-xl shadow-md p-6 border border-gray-100 hover:shadow-lg transition-shadow duration-200;
+  }
+  
+  .language-option {
+    @apply flex items-center justify-between p-4 bg-white rounded-lg border-2 border-gray-200 hover:border-health-primary hover:bg-health-light cursor-pointer transition-all duration-200;
+  }
+  
+  .language-option.selected {
+    @apply border-health-primary bg-health-light;
+  }
+}
